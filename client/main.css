@@ -1,0 +1,40 @@
+/* CSS declarations go here */
+
+#item0 {
+  float:left;
+  width:auto;
+  margin-left:70px;
+  margin-top: 1.0em;
+  cursor: pointer;
+}
+
+#item1 {
+  float:left;
+  width:auto;
+  margin-left:50px;
+}
+
+#item2 {
+  float:left;
+  width:auto;
+  margin-left:50px;
+}
+
+
+#item3 {
+  float:left;
+  width:auto;
+  margin-left:50px;
+  margin-top: 1.0em
+}
+
+li {
+  width: 30px;
+  height: 30px;
+  display:inline-block;
+  
+}
+
+body{
+	padding-top: 60px;
+}

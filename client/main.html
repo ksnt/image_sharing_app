@@ -1,0 +1,78 @@
+<head>
+  <title>image shaing application</title>
+</head>
+
+<body>
+  
+</body>
+
+<template name="ApplicationLayout">
+   {{> yield "navbar"}}
+   {{> yield "top"}} 
+   {{> yield "main"}} 
+</template>
+
+<template name="manual">
+
+<h1><b>Draw your own image into the canvas!</b></h1><br>
+<h1><b>You can share your image with others in the conversation page after logging in!</b></h1>
+
+</template>
+
+<template name="nothing"></template>
+
+<template name="navbar">
+ <nav class="navbar navbar-default navbar-fixed-top">
+  <!-- <a class="navbar-brand" href="#">Sharing Drawing Application</a> -->
+  <a class="nav-item nav-link active" href="/items">Home<span class="sr-only">(current)</span></a>
+  <a class="nav-item nav-link" href="./conversation">Go to Conversation!</a>
+  <a class="nav-item nav-link" href="./manual">How to Use</a>
+  <a class="nav-item nav-link " href="#">{{> loginButtons}}</a>
+  <!--
+  <div class="container">
+   {{> loginButtons }}
+  </div>
+  -->
+  </nav>
+</template>
+
+<template name = "welcome">
+  <div class="container">
+    <div class="jumbotron">
+      <center><h1><b>Welcome to Image Sharing Application!</b></h1>
+      <a href="/items" class="btn btn-info">ENTER</a>
+     </center><br>
+    </div>
+  </div>
+</template>
+
+<template name="items">
+    <center><h1><b>Welcome to Image Sharing Application, {{username}}!</b></h1></center><br>
+  <div id="item">
+  <div id="item0">
+    <ul>
+    <li style="background-color:#000000"></li>
+    <li style="background-color:red"></li>
+    <li style="background-color:blue"></li>
+   </ul>
+  </div>
+  <div id="item1">
+    <p>Width<input type="range" min="0" max="100" value="10" id="lineWidth"><span id="lineNum">10</span></p>
+  </div>
+  <div id="item2">
+  <p>Transparence<input type="range" min="0" max="100" value="100" id="alpha"><span id="alphaNum">100</span></p>
+  </div>
+  <div id="item3">
+  <p>
+    <button style="margin-bottom:10px;" id="undo">Go Back</button> 
+    <button style="width:100px;" id="clear">Clear</button>  
+    <button style="width:100px;" id="save">Save</button>
+  </p>
+  </div>
+</div>
+</template>
+
+<template name="canvas">
+  <center><canvas id="canvas" width="810" height="480" style="background-color:rgba(158, 167, 184, 0.2);">
+ </canvas></center>
+</template>
