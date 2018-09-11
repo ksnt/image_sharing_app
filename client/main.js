@@ -35,15 +35,27 @@ Router.route('/items', function () {
 });
 
 Router.route('/conversation', function () {
-  this.render('navbar',{
-  	to:"navbar"
-  });
-  this.render('items',{
-  	to:"top"
-  });
-  this.render('canvas',{
-  	to:"main"
-  });
+  if(Meteor.userId()) {
+    this.render('navbar',{
+  	  to:"navbar"
+    });
+    this.render('items',{
+  	  to:"top"
+    });
+    this.render('canvas',{
+  	  to:"main"
+    })}
+    else{
+      this.render('navbar',{
+  	  to:"navbar"
+    });
+    this.render('nothing',{
+  	  to:"top"
+    });
+    this.render('conversation',{
+  	  to:"main"
+    });
+    }
 });
 
 Router.route('/manual', function () {

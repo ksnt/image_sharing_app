@@ -21,18 +21,59 @@
 
 <template name="nothing"></template>
 
+<template name="conversation">
+<h1><b>Please log in for conversations!</b></h1><br>
+
+</template>
+
 <template name="navbar">
+  <!--
  <nav class="navbar navbar-default navbar-fixed-top">
-  <!-- <a class="navbar-brand" href="#">Sharing Drawing Application</a> -->
   <a class="nav-item nav-link active" href="/items">Home<span class="sr-only">(current)</span></a>
   <a class="nav-item nav-link" href="./conversation">Go to Conversation!</a>
   <a class="nav-item nav-link" href="./manual">How to Use</a>
   <a class="nav-item nav-link " href="#">{{> loginButtons}}</a>
-  <!--
-  <div class="container">
-   {{> loginButtons }}
-  </div>
+  </nav>
   -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid"> 
+    <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
+    <div class="navbar-header">   
+    <!-- メニューボタン 
+        data-toggle : ボタンを押したときにNavbarを開かせるために必要
+        data-target : 複数navbarを作成する場合、ボタンとナビを紐づけるために必要
+        -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    
+    <!-- タイトルなどのテキスト --> 
+    <a class="navbar-brand" href="#">Image Drawing Sharing App</a> </div>
+
+    <!-- グローバルナビの中身 -->
+    <div class="collapse navbar-collapse" id="nav-menu-1">    
+      <!-- 各ナビゲーションメニュー -->
+      <ul class="nav navbar-nav">
+        <!-- 通常のリンク -->
+        <li class="active"><a href="/items">Home</a></li>
+        <li><a href="./conversation">Go to Conversation</a></li>
+        <li><a href="./manual">How to Use</a></li>
+        <li><a class="nav-item nav-link navbar-right" href="#">{{> loginButtons align="right"}}</a></li>
+        <!-- ドロップダウンのメニューも配置可能 -->
+        <!--
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">ドロップダウン <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">ドロップダウン1</a></li>
+            <li><a href="#">ドロップダウン2</a></li>
+            <li><a href="#">ドロップダウン3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">ドロップダウン4</a></li>
+            <li class="divider"></li>
+            <li><a href="#">ドロップダウン5</a></li>
+          </ul>
+        </li>
+         -->
+      </ul>
+    </div>
+  </div>
   </nav>
 </template>
 
@@ -73,6 +114,10 @@
 </template>
 
 <template name="canvas">
-  <center><canvas id="canvas" width="810" height="480" style="background-color:rgba(158, 167, 184, 0.2);">
- </canvas></center>
+  <div class="outer">
+    <p>
+  <canvas id="canvas" width="810" height="480" style="background-color:rgba(158, 167, 184, 0.2);">
+ </canvas>
+</p>
+</div>
 </template>

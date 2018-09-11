@@ -1,11 +1,22 @@
 /* CSS declarations go here */
 
+#item {
+     text-align: center;
+
+}
+
 #item0 {
   float:left;
   width:auto;
   margin-left:70px;
   margin-top: 1.0em;
   cursor: pointer;
+}
+
+#item0 li {
+  width: 30px;
+  height: 30px;
+  display:inline-block;
 }
 
 #item1 {
@@ -28,13 +39,26 @@
   margin-top: 1.0em
 }
 
+/*
 li {
   width: 30px;
   height: 30px;
   display:inline-block;
   
 }
+*/
 
 body{
 	padding-top: 60px;
+}
+
+.outer {
+ width: 100%;
+ /*padding-bottom: 100%; */
+   text-align: center;
+
+}
+
+#canvas{
+   border: solid 1px blue; 
 }
