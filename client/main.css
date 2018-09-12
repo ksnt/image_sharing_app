@@ -1,14 +1,20 @@
 /* CSS declarations go here */
 
+#welcome{
+  margin-left:60px;
+
+}
+
 #item {
-     text-align: center;
+     /*text-align: center;*/
+    margin-left:0px;
 
 }
 
 #item0 {
   float:left;
   width:auto;
-  margin-left:70px;
+  margin-left:30px;
   margin-top: 1.0em;
   cursor: pointer;
 }
@@ -17,6 +23,7 @@
   width: 30px;
   height: 30px;
   display:inline-block;
+
 }
 
 #item1 {
@@ -53,10 +60,10 @@ body{
 }
 
 .outer {
- width: 100%;
- /*padding-bottom: 100%; */
-   text-align: center;
-
+   width: 100%;
+   /*padding-bottom: 100%; */
+   /*text-align: center;*/
+    margin-left:70px;
 }
 
 #canvas{

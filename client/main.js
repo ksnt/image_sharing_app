@@ -35,7 +35,6 @@ Router.route('/items', function () {
 });
 
 Router.route('/conversation', function () {
-  if(Meteor.userId()) {
     this.render('navbar',{
   	  to:"navbar"
     });
@@ -44,18 +43,13 @@ Router.route('/conversation', function () {
     });
     this.render('canvas',{
   	  to:"main"
-    })}
-    else{
-      this.render('navbar',{
-  	  to:"navbar"
     });
-    this.render('nothing',{
-  	  to:"top"
+    this.render('user_comment',{
+  	  to:"bottom"
     });
-    this.render('conversation',{
-  	  to:"main"
+    this.render('comments',{
+  	  to:"rightspace"
     });
-    }
 });
 
 Router.route('/manual', function () {

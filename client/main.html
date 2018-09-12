@@ -10,7 +10,15 @@
    {{> yield "navbar"}}
    {{> yield "top"}} 
    {{> yield "main"}} 
+   {{> yield "bottom"}}
+   {{> yield "rightspace"}}
 </template>
+
+
+
+<template name="comments">
+</template>
+
 
 <template name="manual">
 
@@ -88,7 +96,9 @@
 </template>
 
 <template name="items">
-    <center><h1><b>Welcome to Image Sharing Application, {{username}}!</b></h1></center><br>
+  <div id="welcome">
+    <h1><b>Welcome to Image Sharing Application, {{username}}!</b></h1><br>
+  </div>
   <div id="item">
   <div id="item0">
     <ul>
@@ -116,8 +126,24 @@
 <template name="canvas">
   <div class="outer">
     <p>
-  <canvas id="canvas" width="810" height="480" style="background-color:rgba(158, 167, 184, 0.2);">
+  <canvas id="canvas" width="790" height="400" style="background-color:rgba(158, 167, 184, 0.2);">
  </canvas>
 </p>
 </div>
 </template>
+
+<template name="user_comment">
+<div class="outer">
+<h4><b>Comment</b></h4><br>
+<textarea rows="5" cols="40">You can give your comment here!</textarea><br>
+<button style="margin-bottom:10px;" id="submit" onclick="add_comment()">Submit</button>
+</div>
+
+<script type="text/javascript">
+  function add_comment(){
+    alert("push!");
+  }
+
+</script>
+</template>
+
