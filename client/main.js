@@ -44,10 +44,10 @@ Router.route('/conversation', function () {
     this.render('canvas',{
   	  to:"main"
     });
-    this.render('user_comment',{
+    this.render('inputForm',{
   	  to:"bottom"
     });
-    this.render('comments',{
+    this.render('commentList',{
   	  to:"rightspace"
     });
 });
@@ -226,10 +226,8 @@ function saveBlob(blob, fileName)
 
 }); // / of Template.canvas.onRendered
 
-
-/// accounts config
-
 if (Meteor.isClient) {
+  /// accounts config
 	Accounts.ui.config({
     passwordSignupFields: "USERNAME_AND_EMAIL"
   });
@@ -243,5 +241,25 @@ if (Meteor.isClient) {
   	}
   }
 
+  });
+  
+  //コメントを取得
+    Template.commentList.helpers({
+    'comment': function () {
+        return Comments.find();
+    }
+  });
+
+  //入力されたコメントを取得し、用意されたCollectionに挿入している
+  Template.inputForm.events({
+    'submit form': function (event) {
+        event.preventDefault();
+        var cmt = event.target.inputComment.value;
+        var eMail = Meteor.user().emails[0].address;
+        Comments.insert({
+          commentStr:cmt,
+          userStr:eMail
+        });
+    }
   });
 }

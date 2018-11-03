@@ -56,16 +56,42 @@ li {
 */
 
 body{
-	padding-top: 60px;
+  padding-top: 60px;
+  /*background-color: yellow;*/
 }
 
-.outer {
-   width: 100%;
+.contents{
+  /*margin-left:60px;*/
+  /*background-color: cyan;*/
+  float: right;
+
+}
+
+#outer {
    /*padding-bottom: 100%; */
    /*text-align: center;*/
-    margin-left:70px;
+    margin-left:60px;
+    /*margin-right:360px;*/
+
+    float: left;
+    /*background-color: yellowgreen;*/
 }
 
 #canvas{
    border: solid 1px blue; 
 }
+
+
+
+#commentList {
+  /*margin-left:880px;*/
+  float: right;
+  width: 200px;
+  /*display: inline-block;*/
+  /*margin-left:60px;*/
+  clear: both;
+  /*background-color: red;*/
+}
+
+
+

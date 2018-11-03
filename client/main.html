@@ -16,10 +16,6 @@
 
 
 
-<template name="comments">
-</template>
-
-
 <template name="manual">
 
 <h1><b>Draw your own image into the canvas!</b></h1><br>
@@ -124,7 +120,7 @@
 </template>
 
 <template name="canvas">
-  <div class="outer">
+  <div id="outer">
     <p>
   <canvas id="canvas" width="790" height="400" style="background-color:rgba(158, 167, 184, 0.2);">
  </canvas>
@@ -132,18 +128,34 @@
 </div>
 </template>
 
-<template name="user_comment">
-<div class="outer">
-<h4><b>Comment</b></h4><br>
-<textarea rows="5" cols="40">You can give your comment here!</textarea><br>
-<button style="margin-bottom:10px;" id="submit" onclick="add_comment()">Submit</button>
+<template name="inputForm">
+    <div id="outer">
+    {{#if currentUser}}
+<form>
+    <h4><b>Add Your Comment</b></h4>
+    <textarea rows="5" cols="30" name ="inputComment">You can give your comment here!</textarea><br>
+    <input type="submit" value="Add Comment">
+    <input type="reset" value="Reset">
+    <br>
+</form>
+    {{else}}
+    If you login, you can add your comment!
+    {{/if}}
+
 </div>
+</template>
 
-<script type="text/javascript">
-  function add_comment(){
-    alert("push!");
-  }
 
-</script>
+<template name="commentList">
+  <div id = "outer">
+    {{#if currentUser}}
+    <h4><b>Given Comments</b></h4>
+    {{#each comment}}
+    <ul style="list-style:none;">
+          <li class="comment">{{commentStr}}<br>({{userStr}})</li><br>
+    </ul>
+    {{/each}}
+    {{/if}}
+  </div>
 </template>
 
