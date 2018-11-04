@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 
 #welcome{
-  margin-left:60px;
+  margin-left:75px;
 
 }
 
@@ -14,7 +14,7 @@
 #item0 {
   float:left;
   width:auto;
-  margin-left:30px;
+  margin-left:35px;
   margin-top: 1.0em;
   cursor: pointer;
 }
@@ -46,15 +46,6 @@
   margin-top: 1.0em
 }
 
-/*
-li {
-  width: 30px;
-  height: 30px;
-  display:inline-block;
-  
-}
-*/
-
 body{
   padding-top: 60px;
   /*background-color: yellow;*/
@@ -77,11 +68,19 @@ body{
     /*background-color: yellowgreen;*/
 }
 
+#outer_2 {
+  /*padding-bottom: 100%; */
+  /*text-align: center;*/
+   margin-left:15px;
+   /*margin-right:360px;*/
+
+   float: left;
+   /*background-color: yellowgreen;*/
+}
+
 #canvas{
    border: solid 1px blue; 
 }
-
-
 
 #commentList {
   /*margin-left:880px;*/
@@ -95,7 +94,7 @@ body{
 
 li.comment{
   width: 220px;
-  margin-right:40px;
+  /*margin-right:40px;*/
   word-wrap: break-word;
 }
 

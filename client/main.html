@@ -2,10 +2,6 @@
   <title>image shaing application</title>
 </head>
 
-<body>
-  
-</body>
-
 <template name="ApplicationLayout">
    {{> yield "navbar"}}
    {{> yield "top"}} 
@@ -14,31 +10,18 @@
    {{> yield "rightspace"}}
 </template>
 
-
-
 <template name="manual">
-
-<h1><b>Draw your own image into the canvas!</b></h1><br>
-<h1><b>You can share your image with others in the conversation page after logging in!</b></h1>
-
+  <h1><b>Draw your own image into the canvas!</b></h1><br>
+  <h1><b>You can share your image with others in the conversation page after logging in!</b></h1>
 </template>
 
 <template name="nothing"></template>
 
 <template name="conversation">
-<h1><b>Please log in for conversations!</b></h1><br>
-
+  <h1><b>Please log in for conversations!</b></h1><br>
 </template>
 
 <template name="navbar">
-  <!--
- <nav class="navbar navbar-default navbar-fixed-top">
-  <a class="nav-item nav-link active" href="/items">Home<span class="sr-only">(current)</span></a>
-  <a class="nav-item nav-link" href="./conversation">Go to Conversation!</a>
-  <a class="nav-item nav-link" href="./manual">How to Use</a>
-  <a class="nav-item nav-link " href="#">{{> loginButtons}}</a>
-  </nav>
-  -->
   <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid"> 
     <!-- スマートフォンサイズで表示されるメニューボタンとテキスト -->
@@ -46,13 +29,13 @@
     <!-- メニューボタン 
         data-toggle : ボタンを押したときにNavbarを開かせるために必要
         data-target : 複数navbarを作成する場合、ボタンとナビを紐づけるために必要
-        -->
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+     -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
     
-    <!-- タイトルなどのテキスト --> 
-    <a class="navbar-brand" href="#">Image Drawing Sharing App</a> </div>
+      <!-- タイトルなどのテキスト --> 
+      <a class="navbar-brand" href="#">Image Drawing Sharing App</a> </div>
 
-    <!-- グローバルナビの中身 -->
+      <!-- グローバルナビの中身 -->
     <div class="collapse navbar-collapse" id="nav-menu-1">    
       <!-- 各ナビゲーションメニュー -->
       <ul class="nav navbar-nav">
@@ -61,20 +44,6 @@
         <!-- <li><a href="./conversation">Go to Conversation</a></li> -->
         <li><a href="./manual">How to Use</a></li>
         <li><a class="nav-item nav-link navbar-right" href="#">{{> loginButtons align="right"}}</a></li>
-        <!-- ドロップダウンのメニューも配置可能 -->
-        <!--
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">ドロップダウン <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">ドロップダウン1</a></li>
-            <li><a href="#">ドロップダウン2</a></li>
-            <li><a href="#">ドロップダウン3</a></li>
-            <li class="divider"></li>
-            <li><a href="#">ドロップダウン4</a></li>
-            <li class="divider"></li>
-            <li><a href="#">ドロップダウン5</a></li>
-          </ul>
-        </li>
-         -->
       </ul>
     </div>
   </div>
@@ -85,8 +54,8 @@
   <div class="container">
     <div class="jumbotron">
       <center><h1><b>Welcome to Image Sharing Application!</b></h1>
-      <a href="/items" class="btn btn-info">ENTER</a>
-     </center><br>
+        <a href="/items" class="btn btn-info">ENTER</a>
+      </center><br>
     </div>
   </div>
 </template>
@@ -96,55 +65,55 @@
     <h1><b>Welcome to Image Sharing Application, {{username}}!</b></h1><br>
   </div>
   <div id="item">
-  <div id="item0">
-    <ul>
-    <li style="background-color:#000000"></li>
-    <li style="background-color:red"></li>
-    <li style="background-color:blue"></li>
-   </ul>
+    <div id="item0">
+      <ul>
+        <li style="background-color:#000000"></li>
+        <li style="background-color:red"></li>
+        <li style="background-color:blue"></li>
+     </ul>
+    </div>
+    <div id="item1">
+       <p>Width<input type="range" min="0" max="100" value="10" id="lineWidth"><span id="lineNum">10</span></p>
+    </div>
+    <div id="item2">
+      <p>Transparence<input type="range" min="0" max="100" value="100" id="alpha"><span id="alphaNum">100</span></p>
+    </div>
+    <div id="item3">
+      <p>
+        <button style="margin-bottom:10px;" id="undo">Go Back</button> 
+        <button style="width:100px;" id="clear">Clear</button>  
+        <button style="width:100px;" id="save">Save</button>
+      </p>
+    </div>
   </div>
-  <div id="item1">
-    <p>Width<input type="range" min="0" max="100" value="10" id="lineWidth"><span id="lineNum">10</span></p>
-  </div>
-  <div id="item2">
-  <p>Transparence<input type="range" min="0" max="100" value="100" id="alpha"><span id="alphaNum">100</span></p>
-  </div>
-  <div id="item3">
-  <p>
-    <button style="margin-bottom:10px;" id="undo">Go Back</button> 
-    <button style="width:100px;" id="clear">Clear</button>  
-    <button style="width:100px;" id="save">Save</button>
-  </p>
-  </div>
-</div>
 </template>
 
 <template name="canvas">
   <div class="container-fluid">
       <div id="outer">
-    <p>
-  <canvas id="canvas" width="790" height="450" style="background-color:rgba(158, 167, 184, 0.2);">
- </canvas>
-</p>
-</div>
+       <p>
+        <canvas id="canvas" width="820" height="450" style="background-color:rgba(158, 167, 184, 0.2);"></canvas>
+       </p>
+      </div>
   </div>
 </template>
 
 <template name="inputForm">
-    <div id="outer">
+  <div id="outer">
     {{#if currentUser}}
-<form>
-    <h4><b>Add Your Comment</b></h4>
-    <textarea rows="5" cols="30" name ="inputComment">You can give your comment here!</textarea><br>
-    <input type="submit" value="Add Comment">
-    <input type="reset" value="Reset">
-    <br>
-</form>
+      <form>
+        <h4><b>Add Your Comment</b></h4>
+        <textarea rows="5" cols="30" name ="inputComment">You can give your comment here!</textarea><br>
+        <input type="submit" value="Add Comment">
+        <input type="reset" value="Reset">
+        <br>
+      </form>
     {{else}}
-    If you login, you can add your comment!
+      <div id="outer_2">
+        <h4><b>If you login, you can add your comment!</b></h4>
+      </div>
     {{/if}}
-
-</div>
+  </div>
 </template>
 
 
@@ -160,4 +129,3 @@
     <!-- {{/if}} -->
   </div>
 </template>
-
