@@ -32,6 +32,12 @@ Router.route('/items', function () {
   this.render('canvas',{
   	to:"main"
   });
+  this.render('inputForm',{
+    to:"bottom"
+  });
+  this.render('commentList',{
+    to:"rightspace"
+  });
 });
 
 Router.route('/conversation', function () {

@@ -93,5 +93,9 @@ body{
   /*background-color: red;*/
 }
 
-
+li.comment{
+  width: 220px;
+  margin-right:40px;
+  word-wrap: break-word;
+}
 

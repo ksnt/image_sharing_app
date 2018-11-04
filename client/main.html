@@ -58,7 +58,7 @@
       <ul class="nav navbar-nav">
         <!-- 通常のリンク -->
         <li class="active"><a href="/items">Home</a></li>
-        <li><a href="./conversation">Go to Conversation</a></li>
+        <!-- <li><a href="./conversation">Go to Conversation</a></li> -->
         <li><a href="./manual">How to Use</a></li>
         <li><a class="nav-item nav-link navbar-right" href="#">{{> loginButtons align="right"}}</a></li>
         <!-- ドロップダウンのメニューも配置可能 -->
@@ -120,12 +120,14 @@
 </template>
 
 <template name="canvas">
-  <div id="outer">
+  <div class="container-fluid">
+      <div id="outer">
     <p>
-  <canvas id="canvas" width="790" height="400" style="background-color:rgba(158, 167, 184, 0.2);">
+  <canvas id="canvas" width="790" height="450" style="background-color:rgba(158, 167, 184, 0.2);">
  </canvas>
 </p>
 </div>
+  </div>
 </template>
 
 <template name="inputForm">
@@ -148,14 +150,14 @@
 
 <template name="commentList">
   <div id = "outer">
-    {{#if currentUser}}
+    <!-- {{#if currentUser}} -->
     <h4><b>Given Comments</b></h4>
     {{#each comment}}
     <ul style="list-style:none;">
           <li class="comment">{{commentStr}}<br>({{userStr}})</li><br>
     </ul>
     {{/each}}
-    {{/if}}
+    <!-- {{/if}} -->
   </div>
 </template>
 
