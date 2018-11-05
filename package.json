@@ -2,7 +2,7 @@
   "name": "img-share",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "node server.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.55",
