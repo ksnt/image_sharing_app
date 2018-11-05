@@ -2,7 +2,8 @@
 
 #welcome{
   margin-left:75px;
-
+  width:1020px;
+  font-family: clarendon;
 }
 
 #item {
@@ -30,12 +31,14 @@
   float:left;
   width:auto;
   margin-left:50px;
+  font-family: clarendon;
 }
 
 #item2 {
   float:left;
   width:auto;
   margin-left:50px;
+  font-family: clarendon;
 }
 
 
@@ -43,12 +46,14 @@
   float:left;
   width:auto;
   margin-left:50px;
-  margin-top: 1.0em
+  margin-top: 1.0em;
+  font-family: clarendon;
 }
 
 body{
   padding-top: 60px;
   /*background-color: yellow;*/
+  font-family: clarendon;
 }
 
 .contents{
@@ -66,16 +71,18 @@ body{
 
     float: left;
     /*background-color: yellowgreen;*/
+    font-family: clarendon;
 }
 
 #outer_2 {
   /*padding-bottom: 100%; */
   /*text-align: center;*/
-   margin-left:15px;
+   margin-left:75px;
    /*margin-right:360px;*/
 
    float: left;
    /*background-color: yellowgreen;*/
+   font-family: clarendon;
 }
 
 #canvas{
@@ -90,11 +97,18 @@ body{
   /*margin-left:60px;*/
   clear: both;
   /*background-color: red;*/
+  font-family: clarendon;
 }
 
 li.comment{
   width: 220px;
   /*margin-right:40px;*/
   word-wrap: break-word;
+  font-family: clarendon;
 }
 
+#manual{
+  font-family: clarendon;
+  margin-left: 60px;
+  /*margin-right:60px;*/
+}

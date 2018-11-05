@@ -1,5 +1,5 @@
 <head>
-  <title>image shaing application</title>
+  <title>Image Shaing App</title>
 </head>
 
 <template name="ApplicationLayout">
@@ -11,9 +11,13 @@
 </template>
 
 <template name="manual">
-  <h1><b>Draw your own image into the canvas!</b></h1><br>
-  <h1><b>You can share your image with others in the conversation page after logging in!</b></h1>
-</template>
+  <dev id="manual">
+    <b>Draw your own image into the canvas!</b><br>
+  </dev>
+  <dev id="manual">
+    <b>You can share your image with others in the conversation page after logging in!</b>
+  </dev>
+  </template>
 
 <template name="nothing"></template>
 
@@ -53,7 +57,7 @@
 <template name = "welcome">
   <div class="container">
     <div class="jumbotron">
-      <center><h1><b>Welcome to Image Sharing Application!</b></h1>
+      <center><h1><b>Welcome to Image Sharing App!</b></h1>
         <a href="/items" class="btn btn-info">ENTER</a>
       </center><br>
     </div>
@@ -92,14 +96,15 @@
   <div class="container-fluid">
       <div id="outer">
        <p>
-        <canvas id="canvas" width="820" height="450" style="background-color:rgba(158, 167, 184, 0.2);"></canvas>
+         <!-- default width: 820, height: 450 color:rgba(158, 167, 184, 0.2) -->
+        <canvas id="canvas" width="1020" height="450" style="background-color:rgba(158, 167, 184, 0.2);"></canvas>
        </p>
       </div>
   </div>
 </template>
 
 <template name="inputForm">
-  <div id="outer">
+  <div id="outer_2">
     {{#if currentUser}}
       <form>
         <h4><b>Add Your Comment</b></h4>
@@ -109,9 +114,7 @@
         <br>
       </form>
     {{else}}
-      <div id="outer_2">
         <h4><b>If you login, you can add your comment!</b></h4>
-      </div>
     {{/if}}
   </div>
 </template>
@@ -122,9 +125,10 @@
     <!-- {{#if currentUser}} -->
     <h4><b>Given Comments</b></h4>
     {{#each comment}}
-    <ul style="list-style:none;">
+      <ul style="list-style:none;">
           <li class="comment">{{commentStr}}<br>({{userStr}})</li><br>
-    </ul>
+          <!-- {{commentStr}}<br>({{userStr}})<br> --> 
+      </ul>
     {{/each}}
     <!-- {{/if}} -->
   </div>
