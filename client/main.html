@@ -2,6 +2,8 @@
   <title>Image Shaing App</title>
 </head>
 
+<!-- aurhor: takayuki kaisen-->
+
 <template name="ApplicationLayout">
    {{> yield "navbar"}}
    {{> yield "top"}} 
@@ -11,11 +13,22 @@
 </template>
 
 <template name="manual">
-  <dev id="manual">
-    <b>Draw your own image into the canvas!</b><br>
-  </dev>
-  <dev id="manual">
-    <b>You can share your image with others in the conversation page after logging in!</b>
+  <dev class="manual">
+  <ul style="list-style:none;">
+    <b>How to Draw your own image into the canvas</b><br>
+    1.Choose any color from leftmost three boxes above the canvas.<br>
+    2.Select the width of the drawing line moving second leftmost scroll bar.<br>
+    3.Select the Transparence of the drawing line moving third leftmost scroll bar.<br>
+    4.Draw the line with ongoing left click on the canvas.<br><br>
+    <b>How to Deal with Your Own Drawing</b><br>
+    1.By putting the "Go Back" button, you can redo your action anly once.(Unfortunately you can rewind only one time.)<br>
+    2.If you put "Clear" button, you can clea your drawing up.<br>
+    3.Putting "Save" button, you can save the image on the canvas.<br><br>
+    <b>How to Discuss Your Drawing</b><br>
+    1.Login first. If you do not have any account, please create your account. You can both create account and login from "Sign in" menu.<br>
+    2.Once you login, you can see window for comment below the canvas. Plesse add your comment in the window and push submit button.<br>
+    3.Written comment emerges on the right of window for comment. (Now you cannot remove or edit your comment unfortunately)<br><br>
+  </ul>
   </dev>
   </template>
 
@@ -37,7 +50,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
     
       <!-- タイトルなどのテキスト --> 
-      <a class="navbar-brand" href="#">Image Drawing Sharing App</a> </div>
+      <a class="navbar-brand" href="#">Image Sharing App</a> </div>
 
       <!-- グローバルナビの中身 -->
     <div class="collapse navbar-collapse" id="nav-menu-1">    
@@ -97,7 +110,7 @@
       <div id="outer">
        <p>
          <!-- default width: 820, height: 450 color:rgba(158, 167, 184, 0.2) -->
-        <canvas id="canvas" width="1020" height="450" style="background-color:rgba(158, 167, 184, 0.2);"></canvas>
+        <canvas id="canvas" width="820" height="450" style="background-color:rgba(158, 167, 184, 0.2);"></canvas>
        </p>
       </div>
   </div>

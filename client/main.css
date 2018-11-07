@@ -2,7 +2,7 @@
 
 #welcome{
   margin-left:75px;
-  width:1020px;
+  width:820px;
   font-family: clarendon;
 }
 
@@ -107,8 +107,15 @@ li.comment{
   font-family: clarendon;
 }
 
-#manual{
+.manual{
   font-family: clarendon;
   margin-left: 60px;
   /*margin-right:60px;*/
+  font-size: 14.0pt;
+
+}
+
+.manual li{
+  font-family: clarendon;
+  margin-left: 60px;
 }
