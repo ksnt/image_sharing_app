@@ -4,7 +4,7 @@ This is Drawing image sharing application.
 
 **WARNING**  
 This application should not be deployed as this is.  
-If you want to deploy, please be careful of security. You shuould remove autopublish package and rewrite some parts of the code.
+If you want to deploy, please be careful of security. You shuould remove `autopublish` package and rewrite some parts of the code.
 
 **HOW TO USE**  
 1. Clone the repository and put it in your favorite place.  
